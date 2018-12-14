@@ -37,3 +37,4 @@ C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\
 C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.exe
 C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.pdb
 C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.MyForm.frmDeleteUser.resources
+C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.MyForm.ChangePassword.resources

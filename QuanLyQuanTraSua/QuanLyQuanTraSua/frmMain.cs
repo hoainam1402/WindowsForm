@@ -69,5 +69,10 @@ namespace QuanLyQuanTraSua
             this.Close();
             frmLogin.instance.Show();
         }
+
+        private void tbtDelete_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

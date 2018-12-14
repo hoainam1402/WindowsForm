@@ -37,44 +37,45 @@ namespace QuanLyQuanTraSua.MyForm
 
         private void tbtYes_Click(object sender, EventArgs e)
         {
-            try
+            //try
+            //{
+            string userName = txtMaNv.Text;
+            string passWord = txtPassword.Text;
+            string Add = txtAdd.Text;
+            string Phone = txtPhone.Text;
+            string name = txtPassword.Text;
+            string Chucvu = cmbchucvu.Text;
+
+            var user = db.NhanViens.Where(s => s.MaNv == userName && s.MatKhau == passWord && s.SDT == Phone && s.TenNV == name && s.ChucVu == Chucvu && s.DiaChi == Add).FirstOrDefault();
+            if (user == null)
             {
-                string userName = txtMaNv.Text;
-                string passWord = txtPassword.Text;
-                string Add = txtAdd.Text;
-                string Phone = txtPhone.Text;
-                string name = txtPassword.Text;
-                string Chucvu = cmbchucvu.Text;
-
-                var user = db.NhanViens.Where(s => s.MaNv == userName && s.MatKhau == passWord && s.SDT == Phone && s.TenNV == name && s.ChucVu == Chucvu && s.DiaChi == Add).FirstOrDefault();
-                if (user == null)
-                {
-                    NhanVien nhanVien = new NhanVien();
-                    nhanVien.MaNv = userName;
-                    nhanVien.MatKhau = passWord;
-                    nhanVien.TenNV = name;
-                    nhanVien.SDT = Phone;
-                    nhanVien.DiaChi = Add;
-                    nhanVien.ChucVu = Chucvu;
-                    db.NhanViens.Add(nhanVien);
-                    db.SaveChanges();
-                    MessageBox.Show("Đăng ký thành công");
-                    this.Close();
-                    frmLogin.instance.Show();
-
-                }
-                else
-                {
-                    MessageBox.Show("Đăng ký thất bại");
-                    frmLogin.instance.Show();
-                    this.Hide();
-                }
+                NhanVien nhanVien = new NhanVien();
+                nhanVien.MaNv = userName;
+                nhanVien.MatKhau = passWord;
+                nhanVien.TenNV = name;
+                nhanVien.SDT = Phone;
+                nhanVien.DiaChi = Add;
+                nhanVien.ChucVu = Chucvu;
+                db.NhanViens.Add(nhanVien);
+                db.SaveChanges();
+                MessageBox.Show("Đăng ký thành công");
+                this.Close();
+                frmLogin.instance.Show();
 
             }
-            catch
+            else
             {
                 MessageBox.Show("Đăng ký thất bại");
+                frmLogin.instance.Show();
+                this.Hide();
             }
-}
+
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Đăng ký thất bại");
+        }
     }
 }
+    
+

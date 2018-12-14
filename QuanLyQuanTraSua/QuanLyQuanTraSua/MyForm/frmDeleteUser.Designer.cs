@@ -120,7 +120,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PreventEnterBeep = true;
             this.txtUserName.Size = new System.Drawing.Size(126, 20);
-            this.txtUserName.TabIndex = 2;
+            this.txtUserName.TabIndex = 1;
             // 
             // txtPassWord
             // 
