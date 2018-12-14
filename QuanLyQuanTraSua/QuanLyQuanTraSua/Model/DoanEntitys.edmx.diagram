@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="daa4cc63757749f096ed1fd2f3b07dd0" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.CTHD" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CTPN" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.HoaDon" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.KhachHang" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.LoaiMon" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MonAn" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.NhanVien" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PhieuNhap" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_CTHD_HoaDon" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_CTHD_MonAn" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_CTPN_MonAn" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_CTPN_PhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_HoaDon_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_HoaDon_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_MonAn_LoaiMon" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

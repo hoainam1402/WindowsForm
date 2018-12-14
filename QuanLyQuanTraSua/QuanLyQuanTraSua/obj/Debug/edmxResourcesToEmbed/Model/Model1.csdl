@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CTHD">
+    <Key>
+      <PropertyRef Name="MaHD" />
+      <PropertyRef Name="MaMon" />
+    </Key>
+    <Property Name="MaHD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaMon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="GiaBan" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="HoaDon" Relationship="Self.FK_CTHD_HoaDon" FromRole="CTHD" ToRole="HoaDon" />
+    <NavigationProperty Name="MonAn" Relationship="Self.FK_CTHD_MonAn" FromRole="CTHD" ToRole="MonAn" />
+  </EntityType>
+  <EntityType Name="CTPN">
+    <Key>
+      <PropertyRef Name="MaPN" />
+      <PropertyRef Name="MaMon" />
+    </Key>
+    <Property Name="MaPN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaMon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GiaNhap" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SoLuong" Type="Int32" />
+    <NavigationProperty Name="MonAn" Relationship="Self.FK_CTPN_MonAn" FromRole="CTPN" ToRole="MonAn" />
+    <NavigationProperty Name="PhieuNhap" Relationship="Self.FK_CTPN_PhieuNhap" FromRole="CTPN" ToRole="PhieuNhap" />
+  </EntityType>
+  <EntityType Name="HoaDon">
+    <Key>
+      <PropertyRef Name="MaHD" />
+    </Key>
+    <Property Name="MaHD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayLap" Type="DateTime" Precision="0" />
+    <Property Name="MaKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CTHDs" Relationship="Self.FK_CTHD_HoaDon" FromRole="HoaDon" ToRole="CTHD" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK_HoaDon_KhachHang" FromRole="HoaDon" ToRole="KhachHang" />
+    <NavigationProperty Name="NhanVien" Relationship="Self.FK_HoaDon_NhanVien" FromRole="HoaDon" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HoaDons" Relationship="Self.FK_HoaDon_KhachHang" FromRole="KhachHang" ToRole="HoaDon" />
+  </EntityType>
+  <EntityType Name="LoaiMon">
+    <Key>
+      <PropertyRef Name="MaLoai" />
+    </Key>
+    <Property Name="MaLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenMon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MonAns" Relationship="Self.FK_MonAn_LoaiMon" FromRole="LoaiMon" ToRole="MonAn" />
+  </EntityType>
+  <EntityType Name="MonAn">
+    <Key>
+      <PropertyRef Name="MaMon" />
+    </Key>
+    <Property Name="MaMon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenMon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GiaTien" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MaLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CTHDs" Relationship="Self.FK_CTHD_MonAn" FromRole="MonAn" ToRole="CTHD" />
+    <NavigationProperty Name="CTPNs" Relationship="Self.FK_CTPN_MonAn" FromRole="MonAn" ToRole="CTPN" />
+    <NavigationProperty Name="LoaiMon" Relationship="Self.FK_MonAn_LoaiMon" FromRole="MonAn" ToRole="LoaiMon" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNv" />
+    </Key>
+    <Property Name="MaNv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="ChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HoaDons" Relationship="Self.FK_HoaDon_NhanVien" FromRole="NhanVien" ToRole="HoaDon" />
+  </EntityType>
+  <EntityType Name="PhieuNhap">
+    <Key>
+      <PropertyRef Name="MaPN" />
+    </Key>
+    <Property Name="MaPN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenPN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="CTPNs" Relationship="Self.FK_CTPN_PhieuNhap" FromRole="PhieuNhap" ToRole="CTPN" />
+  </EntityType>
+  <Association Name="FK_CTHD_HoaDon">
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
+    <End Role="CTHD" Type="Self.CTHD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDon">
+        <PropertyRef Name="MaHD" />
+      </Principal>
+      <Dependent Role="CTHD">
+        <PropertyRef Name="MaHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHD_MonAn">
+    <End Role="MonAn" Type="Self.MonAn" Multiplicity="1" />
+    <End Role="CTHD" Type="Self.CTHD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonAn">
+        <PropertyRef Name="MaMon" />
+      </Principal>
+      <Dependent Role="CTHD">
+        <PropertyRef Name="MaMon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPN_MonAn">
+    <End Role="MonAn" Type="Self.MonAn" Multiplicity="1" />
+    <End Role="CTPN" Type="Self.CTPN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonAn">
+        <PropertyRef Name="MaMon" />
+      </Principal>
+      <Dependent Role="CTPN">
+        <PropertyRef Name="MaMon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPN_PhieuNhap">
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="1" />
+    <End Role="CTPN" Type="Self.CTPN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuNhap">
+        <PropertyRef Name="MaPN" />
+      </Principal>
+      <Dependent Role="CTPN">
+        <PropertyRef Name="MaPN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoaDon_KhachHang">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoaDon_NhanVien">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNv" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MonAn_LoaiMon">
+    <End Role="LoaiMon" Type="Self.LoaiMon" Multiplicity="0..1" />
+    <End Role="MonAn" Type="Self.MonAn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiMon">
+        <PropertyRef Name="MaLoai" />
+      </Principal>
+      <Dependent Role="MonAn">
+        <PropertyRef Name="MaLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CTHDs" EntityType="Self.CTHD" />
+    <EntitySet Name="CTPNs" EntityType="Self.CTPN" />
+    <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
+    <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
+    <EntitySet Name="LoaiMons" EntityType="Self.LoaiMon" />
+    <EntitySet Name="MonAns" EntityType="Self.MonAn" />
+    <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
+    <EntitySet Name="PhieuNhaps" EntityType="Self.PhieuNhap" />
+    <AssociationSet Name="FK_CTHD_HoaDon" Association="Self.FK_CTHD_HoaDon">
+      <End Role="HoaDon" EntitySet="HoaDons" />
+      <End Role="CTHD" EntitySet="CTHDs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHD_MonAn" Association="Self.FK_CTHD_MonAn">
+      <End Role="MonAn" EntitySet="MonAns" />
+      <End Role="CTHD" EntitySet="CTHDs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPN_MonAn" Association="Self.FK_CTPN_MonAn">
+      <End Role="MonAn" EntitySet="MonAns" />
+      <End Role="CTPN" EntitySet="CTPNs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPN_PhieuNhap" Association="Self.FK_CTPN_PhieuNhap">
+      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
+      <End Role="CTPN" EntitySet="CTPNs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDon_KhachHang" Association="Self.FK_HoaDon_KhachHang">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="HoaDon" EntitySet="HoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDon_NhanVien" Association="Self.FK_HoaDon_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="HoaDon" EntitySet="HoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MonAn_LoaiMon" Association="Self.FK_MonAn_LoaiMon">
+      <End Role="LoaiMon" EntitySet="LoaiMons" />
+      <End Role="MonAn" EntitySet="MonAns" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
