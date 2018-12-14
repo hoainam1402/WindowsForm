@@ -72,7 +72,8 @@ namespace QuanLyQuanTraSua
 
         private void tbtDelete_Click(object sender, EventArgs e)
         {
-            
+            frmChangePassword frm = new frmChangePassword();
+            frm.Show();
         }
     }
 }
