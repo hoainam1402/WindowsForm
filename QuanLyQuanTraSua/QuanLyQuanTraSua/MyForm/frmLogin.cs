@@ -70,5 +70,10 @@ namespace QuanLyQuanTraSua.MyForm
             frm.Show();
             this.Hide();
         }
+
+        private void ribbonControl1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -325,6 +325,7 @@
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "frmRegiter";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Kí";
             this.Load += new System.EventHandler(this.frmRegiter_Load);
             this.ResumeLayout(false);

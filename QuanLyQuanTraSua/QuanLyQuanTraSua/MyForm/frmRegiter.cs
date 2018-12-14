@@ -43,14 +43,9 @@ namespace QuanLyQuanTraSua.MyForm
                 string passWord = txtPassword.Text;
                 string Add = txtAdd.Text;
                 string Phone = txtPhone.Text;
-                string name = txtUsername.Text;
+                string name = txtPassword.Text;
                 string Chucvu = cmbchucvu.Text;
-                if (txtMaNv.Text == "" || cmbchucvu.Text == "" || txtPassword.Text == "" || txtUsername.Text == "" || txtPhone.Text == "" || txtAdd.Text == "")
-                {
-                    MessageBox.Show("Chưa đủ thông tin đăng kí ");
-                    frmLogin.instance.Show();
-                    this.Hide();
-                }
+
                 var user = db.NhanViens.Where(s => s.MaNv == userName && s.MatKhau == passWord && s.SDT == Phone && s.TenNV == name && s.ChucVu == Chucvu && s.DiaChi == Add).FirstOrDefault();
                 if (user == null)
                 {
@@ -64,16 +59,22 @@ namespace QuanLyQuanTraSua.MyForm
                     db.NhanViens.Add(nhanVien);
                     db.SaveChanges();
                     MessageBox.Show("Đăng ký thành công");
-                    
-                    frmLogin.instance.Show();
                     this.Close();
+                    frmLogin.instance.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Đăng ký thất bại");
+                    frmLogin.instance.Show();
+                    this.Hide();
                 }
 
             }
             catch
             {
-                //MessageBox.Show("Đăng ký thất bại");
+                MessageBox.Show("Đăng ký thất bại");
             }
-        }
+}
     }
 }

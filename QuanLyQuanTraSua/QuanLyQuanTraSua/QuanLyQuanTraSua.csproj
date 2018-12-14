@@ -99,6 +99,12 @@
     <Compile Include="Model\PhieuNhap.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frmDeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frmDeleteUser.Designer.cs">
+      <DependentUpon>frmDeleteUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frmDeleteUser.resx">
+      <DependentUpon>frmDeleteUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

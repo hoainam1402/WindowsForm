@@ -1,6 +1,6 @@
 ﻿namespace QuanLyQuanTraSua.MyForm
 {
-    partial class frmLogin
+    partial class frmDeleteUser
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
+            this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.txtMaNv = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tbtLogin = new DevComponents.DotNetBar.ButtonX();
-            this.tbtRegiter = new DevComponents.DotNetBar.ButtonX();
-            this.tbtExit = new DevComponents.DotNetBar.ButtonX();
+            this.txtUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtPassWord = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -52,7 +52,7 @@
             this.ribbonControl1.Location = new System.Drawing.Point(5, 1);
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.ribbonControl1.Size = new System.Drawing.Size(410, 28);
+            this.ribbonControl1.Size = new System.Drawing.Size(295, 30);
             this.ribbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.ribbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -72,7 +72,12 @@
             this.ribbonControl1.TabGroupHeight = 14;
             this.ribbonControl1.TabIndex = 0;
             this.ribbonControl1.Text = "ribbonControl1";
-            this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click_1);
+            // 
+            // ribbonTabItem1
+            // 
+            this.ribbonTabItem1.Checked = true;
+            this.ribbonTabItem1.Name = "ribbonTabItem1";
+            this.ribbonTabItem1.Text = "ribbonTabItem1";
             // 
             // styleManager1
             // 
@@ -81,118 +86,95 @@
             // 
             // labelX1
             // 
-            this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            this.labelX1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Cursor = System.Windows.Forms.Cursors.No;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.ForeColor = System.Drawing.Color.Black;
-            this.labelX1.Location = new System.Drawing.Point(17, 48);
+            this.labelX1.Location = new System.Drawing.Point(18, 59);
             this.labelX1.Name = "labelX1";
-            this.labelX1.SingleLineColor = System.Drawing.Color.White;
             this.labelX1.Size = new System.Drawing.Size(75, 23);
             this.labelX1.TabIndex = 1;
             this.labelX1.Text = "Tài Khoản";
             // 
             // labelX2
             // 
-            this.labelX2.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(17, 103);
+            this.labelX2.Location = new System.Drawing.Point(18, 100);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.Size = new System.Drawing.Size(75, 19);
             this.labelX2.TabIndex = 1;
-            this.labelX2.Text = "Mật Khẩu";
+            this.labelX2.Text = "Mật Khẩu ";
+            this.labelX2.Click += new System.EventHandler(this.labelX2_Click);
             // 
-            // txtMaNv
-            // 
-            // 
-            // 
-            // 
-            this.txtMaNv.Border.Class = "TextBoxBorder";
-            this.txtMaNv.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtMaNv.Location = new System.Drawing.Point(116, 50);
-            this.txtMaNv.Name = "txtMaNv";
-            this.txtMaNv.PreventEnterBeep = true;
-            this.txtMaNv.Size = new System.Drawing.Size(172, 20);
-            this.txtMaNv.TabIndex = 1;
-            // 
-            // txtPassword
+            // txtUserName
             // 
             // 
             // 
             // 
-            this.txtPassword.Border.Class = "TextBoxBorder";
-            this.txtPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPassword.Location = new System.Drawing.Point(116, 103);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.PreventEnterBeep = true;
-            this.txtPassword.Size = new System.Drawing.Size(172, 20);
-            this.txtPassword.TabIndex = 2;
+            this.txtUserName.Border.Class = "TextBoxBorder";
+            this.txtUserName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtUserName.Location = new System.Drawing.Point(111, 59);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.PreventEnterBeep = true;
+            this.txtUserName.Size = new System.Drawing.Size(126, 20);
+            this.txtUserName.TabIndex = 2;
             // 
-            // tbtLogin
+            // txtPassWord
             // 
-            this.tbtLogin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.tbtLogin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.tbtLogin.Location = new System.Drawing.Point(326, 47);
-            this.tbtLogin.Name = "tbtLogin";
-            this.tbtLogin.Size = new System.Drawing.Size(75, 23);
-            this.tbtLogin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.tbtLogin.TabIndex = 3;
-            this.tbtLogin.Text = "Đăng Nhập";
-            this.tbtLogin.Click += new System.EventHandler(this.tbtLogin_Click);
             // 
-            // tbtRegiter
             // 
-            this.tbtRegiter.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.tbtRegiter.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.tbtRegiter.Location = new System.Drawing.Point(326, 89);
-            this.tbtRegiter.Name = "tbtRegiter";
-            this.tbtRegiter.Size = new System.Drawing.Size(75, 23);
-            this.tbtRegiter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.tbtRegiter.TabIndex = 4;
-            this.tbtRegiter.Text = "Đăng Ký";
-            this.tbtRegiter.Click += new System.EventHandler(this.tbtRegiter_Click);
             // 
-            // tbtExit
+            this.txtPassWord.Border.Class = "TextBoxBorder";
+            this.txtPassWord.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPassWord.Location = new System.Drawing.Point(111, 100);
+            this.txtPassWord.Name = "txtPassWord";
+            this.txtPassWord.PasswordChar = '*';
+            this.txtPassWord.PreventEnterBeep = true;
+            this.txtPassWord.Size = new System.Drawing.Size(126, 20);
+            this.txtPassWord.TabIndex = 2;
             // 
-            this.tbtExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.tbtExit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.tbtExit.Location = new System.Drawing.Point(326, 134);
-            this.tbtExit.Name = "tbtExit";
-            this.tbtExit.Size = new System.Drawing.Size(75, 23);
-            this.tbtExit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.tbtExit.TabIndex = 5;
-            this.tbtExit.Text = "Thoát";
-            this.tbtExit.Click += new System.EventHandler(this.tbtExit_Click);
+            // buttonX1
             // 
-            // frmLogin
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(55, 151);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(75, 23);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 3;
+            this.buttonX1.Text = "Đồng ý";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Location = new System.Drawing.Point(193, 151);
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Size = new System.Drawing.Size(75, 23);
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.TabIndex = 4;
+            this.buttonX2.Text = "Thoát";
+            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
+            // 
+            // frmDeleteUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::QuanLyQuanTraSua.Properties.Resources.privileges_gong_cha;
-            this.BackgroundImageUnderCaption = true;
-            this.ClientSize = new System.Drawing.Size(420, 188);
-            this.Controls.Add(this.tbtExit);
-            this.Controls.Add(this.tbtRegiter);
-            this.Controls.Add(this.tbtLogin);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtMaNv);
+            this.ClientSize = new System.Drawing.Size(305, 195);
+            this.Controls.Add(this.buttonX2);
+            this.Controls.Add(this.buttonX1);
+            this.Controls.Add(this.txtPassWord);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.ribbonControl1);
-            this.Name = "frmLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đăng Nhập";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
+            this.Name = "frmDeleteUser";
+            this.Text = "Xóa Tài Khoản";
+            this.Load += new System.EventHandler(this.frmDeleteUser_Load);
             this.ResumeLayout(false);
 
         }
@@ -200,13 +182,13 @@
         #endregion
 
         private DevComponents.DotNetBar.RibbonControl ribbonControl1;
+        private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem1;
         private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtMaNv;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtPassword;
-        private DevComponents.DotNetBar.ButtonX tbtLogin;
-        private DevComponents.DotNetBar.ButtonX tbtRegiter;
-        private DevComponents.DotNetBar.ButtonX tbtExit;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtUserName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPassWord;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.ButtonX buttonX2;
     }
 }

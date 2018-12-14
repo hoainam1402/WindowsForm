@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyQuanTraSua.MyForm;
+using QuanLyQuanTraSua.Model;
 
 namespace QuanLyQuanTraSua
 {
     public partial class frmMain : DevComponents.DotNetBar.Office2007RibbonForm
     {
+        Entities db = new Entities();
+        private NhanVien user;
+
         public frmMain()
         {
             InitializeComponent();
@@ -54,6 +58,13 @@ namespace QuanLyQuanTraSua
         }
 
         private void tbtExit_Click(object sender, EventArgs e)
+        {
+            frmDeleteUser frm = new frmDeleteUser();
+            frm.Show();
+            this.Close();
+        }
+
+        private void tbtChangePassword_Click(object sender, EventArgs e)
         {
             this.Close();
             frmLogin.instance.Show();

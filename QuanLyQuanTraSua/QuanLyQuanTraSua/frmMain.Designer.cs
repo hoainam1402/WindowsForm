@@ -35,6 +35,8 @@
             this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar7 = new DevComponents.DotNetBar.RibbonBar();
+            this.tbtDelete = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
             this.tbtExit = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
@@ -133,6 +135,7 @@
             // ribbonPanel1
             // 
             this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel1.Controls.Add(this.ribbonBar7);
             this.ribbonPanel1.Controls.Add(this.ribbonBar2);
             this.ribbonPanel1.Controls.Add(this.ribbonBar1);
             this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -154,6 +157,42 @@
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
             // 
+            // ribbonBar7
+            // 
+            this.ribbonBar7.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar7.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar7.ContainerControlProcessDialogKey = true;
+            this.ribbonBar7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar7.DragDropSupport = true;
+            this.ribbonBar7.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.tbtDelete});
+            this.ribbonBar7.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar7.Name = "ribbonBar7";
+            this.ribbonBar7.Size = new System.Drawing.Size(109, 92);
+            this.ribbonBar7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar7.TabIndex = 2;
+            // 
+            // 
+            // 
+            this.ribbonBar7.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar7.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // tbtDelete
+            // 
+            this.tbtDelete.Name = "tbtDelete";
+            this.tbtDelete.SubItemsExpandWidth = 14;
+            this.tbtDelete.Text = "Thay Đổi Mật Khẩu";
+            // 
             // ribbonBar2
             // 
             this.ribbonBar2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -173,9 +212,9 @@
             this.ribbonBar2.EnableDragDrop = true;
             this.ribbonBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.tbtExit});
-            this.ribbonBar2.Location = new System.Drawing.Point(114, 0);
+            this.ribbonBar2.Location = new System.Drawing.Point(236, 0);
             this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(124, 92);
+            this.ribbonBar2.Size = new System.Drawing.Size(90, 92);
             this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar2.TabIndex = 1;
             this.ribbonBar2.TabStop = false;
@@ -195,7 +234,7 @@
             this.tbtExit.NotificationMarkPosition = DevComponents.DotNetBar.eNotificationMarkPosition.TopLeft;
             this.tbtExit.PopupType = DevComponents.DotNetBar.ePopupType.ToolBar;
             this.tbtExit.SubItemsExpandWidth = 14;
-            this.tbtExit.Text = "Đăng Xuất Tài Khoản";
+            this.tbtExit.Text = "Xóa Tài Khoản";
             this.tbtExit.Click += new System.EventHandler(this.tbtExit_Click);
             // 
             // ribbonBar1
@@ -216,9 +255,9 @@
             this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.tbtChangePassword});
-            this.ribbonBar1.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar1.Location = new System.Drawing.Point(114, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(109, 92);
+            this.ribbonBar1.Size = new System.Drawing.Size(120, 92);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar1.TabIndex = 0;
             // 
@@ -236,7 +275,8 @@
             this.tbtChangePassword.NotificationMarkPosition = DevComponents.DotNetBar.eNotificationMarkPosition.TopLeft;
             this.tbtChangePassword.PopupType = DevComponents.DotNetBar.ePopupType.ToolBar;
             this.tbtChangePassword.SubItemsExpandWidth = 14;
-            this.tbtChangePassword.Text = "Thay Đổi Mật Khẩu";
+            this.tbtChangePassword.Text = "Đăng Xuất Tài Khoản";
+            this.tbtChangePassword.Click += new System.EventHandler(this.tbtChangePassword_Click);
             // 
             // ribbonPanel3
             // 
@@ -576,7 +616,7 @@
             this.RenderFormIcon = false;
             this.RightToLeftLayout = true;
             this.ShowInTaskbar = false;
-            this.Text = "Quản Lý Quán Trà Sửa";
+            this.Text = "Xóa Tài Khoản";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();
@@ -621,6 +661,8 @@
         private DevComponents.DotNetBar.RibbonBar ribbonBar5;
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
         private System.Windows.Forms.Timer timer1;
+        private DevComponents.DotNetBar.RibbonBar ribbonBar7;
+        private DevComponents.DotNetBar.ButtonItem tbtDelete;
     }
 }
 
