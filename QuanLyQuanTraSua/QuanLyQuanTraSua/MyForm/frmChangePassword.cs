@@ -271,37 +271,40 @@ namespace QuanLyQuanTraSua.MyForm
         {
             try
             {
-            
+
                 string password = txtPassword.Text;
                 string newpasss = txtNewPassword.Text;
                 string newpassword = txtNewPass.Text;
-                //if (nhanVien.MatKhau != password)
-                //{
-                //    MessageBox.Show("Mật khẩu hiện tại không đúng");
-                //    return;
-                //}
-                if (newpasss.Trim() != newpassword.Trim())
+                //MessageBox.Show(password.ToString() + " " + nhanVien.MatKhau);
+                if (nhanVien.MatKhau.Trim() != password.ToString())
+                {
+                    MessageBox.Show("Mật khẩu hiện tại không đúng");
+                    return;
+                }
+                else if (newpasss.Trim() != newpassword.Trim())
                 {
                     MessageBox.Show("Mật khẩu mới nhập không khớp");
                     return;
                 }
                 else
                 {
-                    var query = ("Update NhanVien set MaNv = N'" + txtMaNv.Text + "' ,MatKhau='" + txtNewPass.Text + "' where MaNV=N'" + txtMaNv.Text + "'");
-                    db.Database.ExecuteSqlCommand(query);
+                    nhanVien.MatKhau = newpasss;
+                    // db.Set<NhanVien>().Attach(nhanVien);
+                    db.Database.ExecuteSqlCommand("Update NhanVien set MatKhau ='" + newpasss + "' where MaNV = '" + nhanVien.MaNv + "'");
                     db.SaveChanges();
                     MessageBox.Show("Đổi Mật Khẩu Thành Công !");
                     this.Close();
-                    frmMain frm = new frmMain();
+                    frmMain frm = new frmMain(nhanVien);
                     frm.Show();
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Đổi Mật Khẩu Không Thành Công !" + ex.Message);
-               
+
             }
+
 
         }
 
