@@ -101,5 +101,11 @@ namespace QuanLyQuanTraSua
         {
             Application.Exit();
         }
+
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
+            QlyMon ql = new QlyMon();
+            ql.Show();
+        }
     }
 }

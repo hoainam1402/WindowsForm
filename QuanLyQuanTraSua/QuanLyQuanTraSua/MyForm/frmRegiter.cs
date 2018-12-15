@@ -38,21 +38,21 @@ namespace QuanLyQuanTraSua.MyForm
         {
             try
             {
-                string userName = txtMaNv.Text;
+                string ID = txtMaNv.Text;
                 string passWord = txtPassword.Text;
                 string Add = txtAdd.Text;
                 string Phone = txtPhone.Text;
-                string name = txtPassword.Text;
+                string name = txtUsername.Text; // bug nay :))
                 string Chucvu = cmbchucvu.Text;
-                if (userName ==""|| passWord==""|| Add==""|| Phone=="" ||name=="")
+                if (ID ==""|| passWord==""|| Add==""|| Phone=="" ||name=="")
                 {
                     MessageBox.Show("Thông Tin Chưa Đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                var user = db.NhanViens.Where(s => s.MaNv == userName && s.MatKhau == passWord && s.SDT == Phone && s.TenNV == name && s.ChucVu == Chucvu && s.DiaChi == Add).FirstOrDefault();
+                var user = db.NhanViens.Where(s => s.MaNv == ID && s.MatKhau == passWord && s.SDT == Phone && s.TenNV == name && s.ChucVu == Chucvu && s.DiaChi == Add).FirstOrDefault();
                 if (user == null)
                 {
                     NhanVien nhanVien = new NhanVien();
-                    nhanVien.MaNv = userName;
+                    nhanVien.MaNv = ID;
                     nhanVien.MatKhau = passWord;
                     nhanVien.TenNV = name;
                     nhanVien.SDT = Phone;
