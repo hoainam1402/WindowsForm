@@ -134,6 +134,11 @@ namespace QuanLyQuanTraSua
             string Add = txtDiaChi.Text;
             string Phone = txtSDT.Text;
             string name = txtHoTen.Text;
+            if( userName ==""|| Add == "" || Phone == "" || name == "")
+            {
+                MessageBox.Show("Thông tin không được để trông", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             var user = db.NhanViens.Where(s => s.MaNv == userName).FirstOrDefault();
             if (user != null)
             {
