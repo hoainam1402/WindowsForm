@@ -32,7 +32,6 @@ namespace QuanLyQuanTraSua.MyForm
         private void tbtExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmLogin.instance.Show();
         }
 
         private void tbtYes_Click(object sender, EventArgs e)
@@ -45,7 +44,10 @@ namespace QuanLyQuanTraSua.MyForm
                 string Phone = txtPhone.Text;
                 string name = txtPassword.Text;
                 string Chucvu = cmbchucvu.Text;
-
+                if (userName ==""|| passWord==""|| Add==""|| Phone=="" ||name=="")
+                {
+                    MessageBox.Show("Thông Tin Chưa Đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 var user = db.NhanViens.Where(s => s.MaNv == userName && s.MatKhau == passWord && s.SDT == Phone && s.TenNV == name && s.ChucVu == Chucvu && s.DiaChi == Add).FirstOrDefault();
                 if (user == null)
                 {

@@ -12,9 +12,11 @@ using QuanLyQuanTraSua.MyForm;
 
 namespace QuanLyQuanTraSua.MyForm
 {
-    
+
+
     public partial class frmChangePassword : DevComponents.DotNetBar.Office2007RibbonForm
     {
+        NhanVien nhanVien = new NhanVien();
         private DevComponents.DotNetBar.RibbonControl ribbonControl1;
         private DevComponents.DotNetBar.StyleManager styleManager1;
         private IContainer components;
@@ -31,6 +33,11 @@ namespace QuanLyQuanTraSua.MyForm
         Entities db = new Entities();
         public frmChangePassword()
         {
+            InitializeComponent();
+        }
+        public frmChangePassword(NhanVien nv)
+        {
+            nhanVien = nv;
             InitializeComponent();
         }
 
@@ -211,7 +218,7 @@ namespace QuanLyQuanTraSua.MyForm
             this.txtMaNv.Name = "txtMaNv";
             this.txtMaNv.PreventEnterBeep = true;
             this.txtMaNv.Size = new System.Drawing.Size(133, 20);
-            this.txtMaNv.TabIndex = 7;
+            this.txtMaNv.TabIndex = 0;
             // 
             // frmChangePassword
             // 
@@ -236,6 +243,8 @@ namespace QuanLyQuanTraSua.MyForm
 
         private void ChangePassword_Load(object sender, EventArgs e)
         {
+            txtMaNv.Text = nhanVien.MaNv;
+            txtMaNv.Enabled = false;
 
         }
 
@@ -243,37 +252,43 @@ namespace QuanLyQuanTraSua.MyForm
         {
             try
             {
-                NhanVien nhanVien = new NhanVien();
+            
                 string password = txtPassword.Text;
                 string newpasss = txtNewPassword.Text;
                 string newpassword = txtNewPass.Text;
-                string maNv = txtMaNv.Text;
-                var user = db.NhanViens.Where(s => s.MatKhau == password && s.MaNv == txtMaNv.Text);
-                if (newpasss == newpassword && password == txtPassword.Text)
+                if (nhanVien.MatKhau != password)
                 {
-                    db.Entry(nhanVien).State = EntityState.Modified;
-                    db.SaveChanges();
-                    MessageBox.Show("Đổi Mật Khẩu Thành Công !");
-                    this.Close();
+                    MessageBox.Show("Mật khẩu hiện tại không đúng");
+                    return;
+                }
+                if (newpassword.Trim() != newpassword.Trim())
+                {
+                    MessageBox.Show("Mật khẩu mới nhập không khớp");
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Đổi Mật Khẩu Không Thành Công !");
+                    nhanVien.MatKhau = newpasss;
+                    db.Set<NhanVien>().Attach(nhanVien);   
+                    db.SaveChanges();
+                    MessageBox.Show("Đổi Mật Khẩu Thành Công !");
                     this.Close();
+                    frmMain frm = new frmMain(nhanVien);
+                    frm.Show();
 
                 }
-        }
-            catch
+            }
+            catch(Exception ex)
             {
-                MessageBox.Show("Đổi Mật Khẩu Không Thành Công !");
-                this.Close();
-    }
+                MessageBox.Show("Đổi Mật Khẩu Không Thành Công !" + ex.Message);
+               
+            }
 
-}
+        }
 
         private void tbtExit_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

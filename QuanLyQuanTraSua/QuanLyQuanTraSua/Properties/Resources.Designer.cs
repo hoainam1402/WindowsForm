@@ -63,6 +63,16 @@ namespace QuanLyQuanTraSua.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap foody_800x450___thumbnail_gong_cha_636190567381229348 {
+            get {
+                object obj = ResourceManager.GetObject("foody-800x450 - thumbnail gong cha-636190567381229348", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap foody_mobile_gongcha_mb_jpg_157_635636065715423611 {
             get {
                 object obj = ResourceManager.GetObject("foody-mobile-gongcha-mb-jpg-157-635636065715423611", resourceCulture);

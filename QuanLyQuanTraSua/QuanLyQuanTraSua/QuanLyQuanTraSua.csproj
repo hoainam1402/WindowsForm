@@ -99,6 +99,7 @@
     <Compile Include="Model\PhieuNhap.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\UserPublic.cs" />
     <Compile Include="MyForm\frmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +180,7 @@
       <DependentUpon>DoanEntitys.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\foody-800x450 - thumbnail gong cha-636190567381229348.jpg" />
     <None Include="Resources\gong-cha-21.jpg" />
     <None Include="Resources\s5fp.png" />
     <None Include="Resources\foody-mobile-gongcha-mb-jpg-157-635636065715423611.jpg" />

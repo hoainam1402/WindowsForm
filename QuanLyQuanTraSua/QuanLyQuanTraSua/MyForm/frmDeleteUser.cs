@@ -37,12 +37,14 @@ namespace QuanLyQuanTraSua.MyForm
                 string userName = txtUserName.Text;
                 string passWord = txtPassWord.Text;
                 var user = db.NhanViens.Where(s => s.MaNv == userName && s.MatKhau == passWord).FirstOrDefault();
-
                 db.NhanViens.Remove(user);
                 db.SaveChanges();
                 MessageBox.Show("Xóa thành công");
-                frmLogin.instance.Show();
                 this.Close();
+                frmMain frm = new frmMain();
+                frm.Close();
+                frmLogin.instance.Show();
+                
             }
             catch
             {
@@ -54,7 +56,7 @@ namespace QuanLyQuanTraSua.MyForm
         private void buttonX2_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmLogin.instance.Show();
+            
         }
     }
 }

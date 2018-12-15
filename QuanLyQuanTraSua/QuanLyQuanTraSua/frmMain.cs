@@ -15,15 +15,21 @@ namespace QuanLyQuanTraSua
     public partial class frmMain : DevComponents.DotNetBar.Office2007RibbonForm
     {
         Entities db = new Entities();
-        private NhanVien user;
 
+        NhanVien nhanVien = new NhanVien();
         public frmMain()
+        { 
+            InitializeComponent();
+        }
+        public frmMain(NhanVien nv)
         {
+            nhanVien = nv;
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+              MessageBox.Show(nhanVien.MatKhau,"Mật Khẩu Tài Khoản");
 
         }
 
@@ -61,19 +67,24 @@ namespace QuanLyQuanTraSua
         {
             frmDeleteUser frm = new frmDeleteUser();
             frm.Show();
-            this.Close();
         }
 
         private void tbtChangePassword_Click(object sender, EventArgs e)
         {
+            
             this.Close();
             frmLogin.instance.Show();
         }
 
         private void tbtDelete_Click(object sender, EventArgs e)
         {
-            frmChangePassword frm = new frmChangePassword();
+            frmChangePassword frm = new frmChangePassword(nhanVien);
             frm.Show();
+        }
+
+        private void tbtThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

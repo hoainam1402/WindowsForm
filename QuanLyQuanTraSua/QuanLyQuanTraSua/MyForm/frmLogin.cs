@@ -14,6 +14,7 @@ namespace QuanLyQuanTraSua.MyForm
     public partial class frmLogin : DevComponents.DotNetBar.Office2007RibbonForm
     {
         Entities db = new Entities();
+        public  NhanVien nhanVien = new NhanVien();
         public frmLogin()
         {
             instance = this;
@@ -39,9 +40,11 @@ namespace QuanLyQuanTraSua.MyForm
                 var user = db.NhanViens.Where(s => s.MaNv == username && s.MatKhau == pasword).FirstOrDefault();
                 if (user != null)
                 {
+                    nhanVien = user;
                     MessageBox.Show("Đăng nhập thành công");
+                    
                     this.Hide();
-                    frmMain frm = new frmMain();
+                    frmMain frm = new frmMain(nhanVien);
                     frm.Show();
                     
                 }

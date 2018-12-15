@@ -121,16 +121,19 @@
   <data name="gong-cha-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gong-cha-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="foody-mobile-gongcha-mb-jpg-157-635636065715423611" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foody-mobile-gongcha-mb-jpg-157-635636065715423611.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="s5fp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\s5fp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gong-cha-21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gong-cha-21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="privileges-gong-cha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\privileges-gong-cha.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="foody-mobile-gongcha-mb-jpg-157-635636065715423611" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\foody-mobile-gongcha-mb-jpg-157-635636065715423611.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gong-cha-21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gong-cha-21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="foody-800x450 - thumbnail gong cha-636190567381229348" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foody-800x450 - thumbnail gong cha-636190567381229348.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
