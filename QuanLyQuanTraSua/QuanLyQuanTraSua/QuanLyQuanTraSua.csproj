@@ -199,6 +199,7 @@
       <DependentUpon>DoanEntitys.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\logo.png" />
     <None Include="Resources\foody-800x450 - thumbnail gong cha-636190567381229348.jpg" />
     <None Include="Resources\gong-cha-21.jpg" />
     <None Include="Resources\s5fp.png" />

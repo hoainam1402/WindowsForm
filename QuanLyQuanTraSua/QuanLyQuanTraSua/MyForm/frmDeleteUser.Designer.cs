@@ -86,6 +86,7 @@
             // 
             // labelX1
             // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -98,6 +99,7 @@
             // 
             // labelX2
             // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -164,6 +166,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyQuanTraSua.Properties.Resources.privileges_gong_cha;
+            this.BackgroundImageUnderCaption = true;
             this.ClientSize = new System.Drawing.Size(305, 195);
             this.Controls.Add(this.buttonX2);
             this.Controls.Add(this.buttonX1);
@@ -173,6 +177,7 @@
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "frmDeleteUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xóa Tài Khoản";
             this.Load += new System.EventHandler(this.frmDeleteUser_Load);
             this.ResumeLayout(false);

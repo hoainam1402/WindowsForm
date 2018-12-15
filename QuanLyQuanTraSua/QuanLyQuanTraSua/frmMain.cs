@@ -29,8 +29,7 @@ namespace QuanLyQuanTraSua
 
         private void Form1_Load(object sender, EventArgs e)
         {
-              MessageBox.Show(nhanVien.MatKhau,"Mật Khẩu Tài Khoản");
-
+              
         }
 
         private void buttonItem1_Click(object sender, EventArgs e)
@@ -72,7 +71,7 @@ namespace QuanLyQuanTraSua
         private void tbtChangePassword_Click(object sender, EventArgs e)
         {
             
-            this.Close();
+            this.Hide();
             frmLogin.instance.Show();
         }
 
@@ -91,6 +90,16 @@ namespace QuanLyQuanTraSua
         {
             frmNhanVien frm = new frmNhanVien();
             frm.Show();
+        }
+
+        private void ribbonBar8_ItemClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbtThoat_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

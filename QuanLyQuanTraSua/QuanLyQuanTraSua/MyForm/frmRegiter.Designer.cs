@@ -62,7 +62,7 @@
             this.ribbonControl1.Location = new System.Drawing.Point(5, 1);
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.ribbonControl1.Size = new System.Drawing.Size(333, 28);
+            this.ribbonControl1.Size = new System.Drawing.Size(347, 28);
             this.ribbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.ribbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -307,8 +307,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyQuanTraSua.Properties.Resources.gong_cha_2;
             this.BackgroundImageUnderCaption = true;
-            this.ClientSize = new System.Drawing.Size(343, 406);
+            this.ClientSize = new System.Drawing.Size(357, 376);
             this.Controls.Add(this.cmbchucvu);
             this.Controls.Add(this.tbtExit);
             this.Controls.Add(this.tbtYes);

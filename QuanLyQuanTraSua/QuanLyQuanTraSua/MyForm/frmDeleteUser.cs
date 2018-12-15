@@ -40,10 +40,7 @@ namespace QuanLyQuanTraSua.MyForm
                 db.NhanViens.Remove(user);
                 db.SaveChanges();
                 MessageBox.Show("Xóa thành công");
-                this.Close();
-                frmMain frm = new frmMain();
-                frm.Close();
-                frmLogin.instance.Show();
+                Application.Exit();
                 
             }
             catch

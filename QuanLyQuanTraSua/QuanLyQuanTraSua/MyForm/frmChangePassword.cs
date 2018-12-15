@@ -70,7 +70,7 @@ namespace QuanLyQuanTraSua.MyForm
             this.ribbonControl1.Location = new System.Drawing.Point(5, 1);
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.ribbonControl1.Size = new System.Drawing.Size(312, 25);
+            this.ribbonControl1.Size = new System.Drawing.Size(319, 25);
             this.ribbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.ribbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -103,8 +103,9 @@ namespace QuanLyQuanTraSua.MyForm
             // 
             this.txtPassword.Border.Class = "TextBoxBorder";
             this.txtPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPassword.Location = new System.Drawing.Point(117, 86);
+            this.txtPassword.Location = new System.Drawing.Point(174, 130);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PreventEnterBeep = true;
             this.txtPassword.Size = new System.Drawing.Size(133, 20);
             this.txtPassword.TabIndex = 1;
@@ -116,45 +117,55 @@ namespace QuanLyQuanTraSua.MyForm
             // 
             this.txtNewPassword.Border.Class = "TextBoxBorder";
             this.txtNewPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtNewPassword.Location = new System.Drawing.Point(119, 132);
+            this.txtNewPassword.Location = new System.Drawing.Point(174, 182);
             this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.PasswordChar = '*';
             this.txtNewPassword.PreventEnterBeep = true;
             this.txtNewPassword.Size = new System.Drawing.Size(133, 20);
             this.txtNewPassword.TabIndex = 2;
             // 
             // labelX1
             // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(13, 83);
+            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.ForeColor = System.Drawing.Color.Black;
+            this.labelX1.Location = new System.Drawing.Point(19, 124);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(98, 23);
+            this.labelX1.Size = new System.Drawing.Size(121, 23);
             this.labelX1.TabIndex = 2;
             this.labelX1.Text = "Mật Khẩu Hiện Tại";
             // 
             // labelX2
             // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(13, 129);
+            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX2.ForeColor = System.Drawing.Color.Black;
+            this.labelX2.Location = new System.Drawing.Point(17, 176);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.Size = new System.Drawing.Size(98, 23);
             this.labelX2.TabIndex = 2;
             this.labelX2.Text = "Mật Khẩu Mới";
             // 
             // labelX3
             // 
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(13, 175);
+            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX3.ForeColor = System.Drawing.Color.Black;
+            this.labelX3.Location = new System.Drawing.Point(17, 235);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(98, 23);
+            this.labelX3.Size = new System.Drawing.Size(123, 23);
             this.labelX3.TabIndex = 3;
             this.labelX3.Text = "Nhập Lại Mật Khẩu";
             // 
@@ -165,8 +176,9 @@ namespace QuanLyQuanTraSua.MyForm
             // 
             this.txtNewPass.Border.Class = "TextBoxBorder";
             this.txtNewPass.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtNewPass.Location = new System.Drawing.Point(119, 175);
+            this.txtNewPass.Location = new System.Drawing.Point(174, 238);
             this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.PasswordChar = '*';
             this.txtNewPass.PreventEnterBeep = true;
             this.txtNewPass.Size = new System.Drawing.Size(133, 20);
             this.txtNewPass.TabIndex = 3;
@@ -175,7 +187,7 @@ namespace QuanLyQuanTraSua.MyForm
             // 
             this.tbtYes.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.tbtYes.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.tbtYes.Location = new System.Drawing.Point(55, 223);
+            this.tbtYes.Location = new System.Drawing.Point(58, 284);
             this.tbtYes.Name = "tbtYes";
             this.tbtYes.Size = new System.Drawing.Size(75, 23);
             this.tbtYes.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -187,7 +199,7 @@ namespace QuanLyQuanTraSua.MyForm
             // 
             this.tbtExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.tbtExit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.tbtExit.Location = new System.Drawing.Point(192, 223);
+            this.tbtExit.Location = new System.Drawing.Point(195, 284);
             this.tbtExit.Name = "tbtExit";
             this.tbtExit.Size = new System.Drawing.Size(75, 23);
             this.tbtExit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -197,13 +209,16 @@ namespace QuanLyQuanTraSua.MyForm
             // 
             // labelX4
             // 
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(13, 45);
+            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX4.ForeColor = System.Drawing.Color.Black;
+            this.labelX4.Location = new System.Drawing.Point(17, 72);
             this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(75, 23);
+            this.labelX4.Size = new System.Drawing.Size(98, 23);
             this.labelX4.TabIndex = 6;
             this.labelX4.Text = "Mã Nhân VIên";
             // 
@@ -214,15 +229,18 @@ namespace QuanLyQuanTraSua.MyForm
             // 
             this.txtMaNv.Border.Class = "TextBoxBorder";
             this.txtMaNv.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtMaNv.Location = new System.Drawing.Point(117, 45);
+            this.txtMaNv.Location = new System.Drawing.Point(172, 75);
             this.txtMaNv.Name = "txtMaNv";
             this.txtMaNv.PreventEnterBeep = true;
             this.txtMaNv.Size = new System.Drawing.Size(133, 20);
             this.txtMaNv.TabIndex = 0;
+            this.txtMaNv.TextChanged += new System.EventHandler(this.txtMaNv_TextChanged);
             // 
             // frmChangePassword
             // 
-            this.ClientSize = new System.Drawing.Size(322, 278);
+            this.BackgroundImage = global::QuanLyQuanTraSua.Properties.Resources.foody_mobile_gongcha_mb_jpg_157_635636065715423611;
+            this.BackgroundImageUnderCaption = true;
+            this.ClientSize = new System.Drawing.Size(329, 332);
             this.Controls.Add(this.txtMaNv);
             this.Controls.Add(this.labelX4);
             this.Controls.Add(this.tbtExit);
@@ -235,6 +253,7 @@ namespace QuanLyQuanTraSua.MyForm
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "frmChangePassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi Mật Khẩu";
             this.Load += new System.EventHandler(this.ChangePassword_Load);
             this.ResumeLayout(false);
@@ -256,24 +275,24 @@ namespace QuanLyQuanTraSua.MyForm
                 string password = txtPassword.Text;
                 string newpasss = txtNewPassword.Text;
                 string newpassword = txtNewPass.Text;
-                if (nhanVien.MatKhau != password)
-                {
-                    MessageBox.Show("Mật khẩu hiện tại không đúng");
-                    return;
-                }
-                if (newpassword.Trim() != newpassword.Trim())
+                //if (nhanVien.MatKhau != password)
+                //{
+                //    MessageBox.Show("Mật khẩu hiện tại không đúng");
+                //    return;
+                //}
+                if (newpasss.Trim() != newpassword.Trim())
                 {
                     MessageBox.Show("Mật khẩu mới nhập không khớp");
                     return;
                 }
                 else
                 {
-                    nhanVien.MatKhau = newpasss;
-                    db.Set<NhanVien>().Attach(nhanVien);   
+                    var query = ("Update NhanVien set MaNv = N'" + txtMaNv.Text + "' ,MatKhau='" + txtNewPass.Text + "' where MaNV=N'" + txtMaNv.Text + "'");
+                    db.Database.ExecuteSqlCommand(query);
                     db.SaveChanges();
                     MessageBox.Show("Đổi Mật Khẩu Thành Công !");
                     this.Close();
-                    frmMain frm = new frmMain(nhanVien);
+                    frmMain frm = new frmMain();
                     frm.Show();
 
                 }
@@ -289,6 +308,11 @@ namespace QuanLyQuanTraSua.MyForm
         private void tbtExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtMaNv_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
