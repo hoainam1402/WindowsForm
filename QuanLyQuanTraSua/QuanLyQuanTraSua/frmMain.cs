@@ -86,5 +86,11 @@ namespace QuanLyQuanTraSua
         {
             Application.Exit();
         }
+
+        private void buttonItem1_Click_2(object sender, EventArgs e)
+        {
+            frmNhanVien frm = new frmNhanVien();
+            frm.Show();
+        }
     }
 }

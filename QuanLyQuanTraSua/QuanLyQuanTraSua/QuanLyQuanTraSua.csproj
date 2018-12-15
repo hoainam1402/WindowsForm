@@ -127,11 +127,11 @@
     <Compile Include="MyForm\frmRegiter.Designer.cs">
       <DependentUpon>frmRegiter.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyForm\SearchNhanVien.cs">
+    <Compile Include="MyForm\frmSearchNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyForm\SearchNhanVien.designer.cs">
-      <DependentUpon>SearchNhanVien.cs</DependentUpon>
+    <Compile Include="MyForm\frmSearchNhanVien.designer.cs">
+      <DependentUpon>frmSearchNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -154,8 +154,8 @@
     <EmbeddedResource Include="MyForm\frmRegiter.resx">
       <DependentUpon>frmRegiter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyForm\SearchNhanVien.resx">
-      <DependentUpon>SearchNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="MyForm\frmSearchNhanVien.resx">
+      <DependentUpon>frmSearchNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
