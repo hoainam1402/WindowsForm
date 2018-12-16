@@ -41,6 +41,6 @@ C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\
 C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.frmNhanVien.resources
 C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.SearchNhanVien.resources
 C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.csproj.ResolveComReference.cache
-C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.MyForm.FormThem.resources
-C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.MyForm.QlyMon.resources
 C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.ThemMon.resources
+C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.MyForm.frmFormThem.resources
+C:\Users\HoaiNam\Documents\GitHub\WindowsForm\QuanLyQuanTraSua\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.MyForm.frmQlyMon.resources

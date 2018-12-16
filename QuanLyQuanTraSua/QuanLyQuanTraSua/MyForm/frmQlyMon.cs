@@ -13,12 +13,12 @@ using QuanLyQuanTraSua.Model;
 
 namespace QuanLyQuanTraSua.MyForm
 {
-    public partial class QlyMon : Form
+    public partial class frmQlyMon : Form
     {
         Entities context = new Entities();
         //DoAnEntities context = new DoAnEntities();
         
-        public QlyMon()
+        public frmQlyMon()
         {
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
@@ -54,7 +54,7 @@ namespace QuanLyQuanTraSua.MyForm
         private void btThem_Click(object sender, EventArgs e)
         {
          
-            FormThem a = new FormThem();
+            frmFormThem a = new frmFormThem();
             a.Show();
         }
 
@@ -76,7 +76,7 @@ namespace QuanLyQuanTraSua.MyForm
         private void btSua_Click(object sender, EventArgs e)
         {
             if (txtGIA.Text == "" || txtMA.Text == "" || txtTEN.Text == "")
-                MessageBox.Show("Vui long nhap day du thong tin can sua","Thong bao",MessageBoxButtons.OK);
+                MessageBox.Show("Vui Lòng Điền Đầy Đủ Thông Tin Cần Sửa","Thông Báo",MessageBoxButtons.OK);
             else
             {
                 context.Database.ExecuteSqlCommand("Update LoaiMon Set TenMon = N'" + txtTEN.Text + "' where  MaLoai =N'" + txtMAL.Text + "' ");
@@ -89,7 +89,7 @@ namespace QuanLyQuanTraSua.MyForm
         private void btXoa_Click(object sender, EventArgs e)
         {
             if (txtGIA.Text == "" || txtMA.Text == "" || txtTEN.Text == "")
-                MessageBox.Show("Vui long chon mon can xoa", "Thong bao", MessageBoxButtons.OK);
+                MessageBox.Show("Vui Lòng Nhập Thông Tin Món Cần Xóa", "Thông Báo", MessageBoxButtons.OK);
 
             else
             {

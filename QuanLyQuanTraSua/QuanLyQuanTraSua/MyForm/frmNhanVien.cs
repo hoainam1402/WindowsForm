@@ -134,7 +134,12 @@ namespace QuanLyQuanTraSua
             string Add = txtDiaChi.Text;
             string Phone = txtSDT.Text;
             string name = txtHoTen.Text;
-            if( userName ==""|| Add == "" || Phone == "" || name == "")
+            if (userName == "")
+            {
+                MessageBox.Show("Nhấp chọn vào nhân viên cần edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if(Add == "" || Phone == "" || name == "")
             {
                 MessageBox.Show("Thông tin không được để trông", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

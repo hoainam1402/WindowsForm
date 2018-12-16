@@ -14,10 +14,10 @@ using QuanLyQuanTraSua.Model;
 
 namespace QuanLyQuanTraSua.MyForm
 {
-    public partial class FormThem : Form
+    public partial class frmFormThem : Form
     {
         Entities context = new Entities();
-        public FormThem()
+        public frmFormThem()
         {
             InitializeComponent();
         }

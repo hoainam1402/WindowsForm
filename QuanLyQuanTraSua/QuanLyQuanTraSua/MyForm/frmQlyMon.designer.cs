@@ -1,6 +1,6 @@
 ﻿namespace QuanLyQuanTraSua.MyForm
 {
-    partial class QlyMon
+    partial class frmQlyMon
     {
         /// <summary>
         /// Required designer variable.

@@ -104,7 +104,7 @@ namespace QuanLyQuanTraSua
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
-            QlyMon ql = new QlyMon();
+            frmQlyMon ql = new frmQlyMon();
             ql.Show();
         }
     }
